@@ -1,0 +1,216 @@
+.header{
+    height: 120px;
+    background-image: linear-gradient(0,#fe6433,#f53e2d);
+}
+.header__navbar{
+    display: flex;
+    justify-content: space-between; 
+}
+.header__navbar-list{
+    list-style: none;
+    padding-left: 0;
+    margin-top: 4px;
+    display: flex;
+    align-items: baseline;
+}
+.header__navbar-item{
+    margin:0 8px;
+    padding-top: 10px;
+    position: relative;
+    align-items: center;
+}
+.header__navbar-item--has-qr:hover .header__qr{
+    display: block;
+}
+.header__navbar-item--has-notify:hover .header__notify{
+    display: block;
+}
+.header__navbar-item,
+.header__navbar-item-link{
+    display: inline-block;
+    font-size: 1.3rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+.header__navbar-item:hover,
+.header__navbar-icon-link:hover,
+.header__navbar-item-link:hover{
+    color:rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+.header__navbar-item--strong{
+    font-weight: 500;
+    line-height: 1;
+}
+.header__navbar-item--separate::after{
+    position: absolute;
+    content: "";
+    top: calc(50% + 5px);
+    right: -9px;
+    display: block;
+    width: 1px;
+    height: 16px;
+    background-color: #fb9086;
+    transform: translateY(-50%);
+}
+.header__navbar-icon-link{
+    color:var(--white-color);
+    text-decoration: none;
+}
+.header__navbar-icon{
+    font-size: 1.8rem;
+}
+.header__navbar-item{
+    display:flex;
+}
+.header__navbar-icon{
+    margin:0 4px;
+}
+.header__navbar-icon--no-pointer{
+    cursor:text;
+    color:var(--white-color);
+    margin-right: 2px;
+}
+/* Header QR code */
+.header__qr{
+    width: 187px;
+    color: var(--white-color);
+    position: absolute;
+    left:0;
+    top:100%;
+    padding:10px;
+    border-radius: 4px;
+    display: none;
+    animation: FadeIn ease-in 0.3s;
+}
+.header__qr-img{
+    width: 100%;
+}
+.header__qr-apps{
+    display: flex;
+    justify-content: space-between;
+}
+.header__qr-apps-download{
+  height: 18px;
+}
+/* header notify */
+.header__notify{
+   position: absolute;
+   width: 404px;
+   top:118%;
+   right: 0;
+   border: 1px solid #D3D3D3 ;
+   background-color: var(--white-color);
+   cursor:default;
+   transform-origin: calc(100% - 34px) top;
+   animation: headerNotifyGrowth ease-in 0.2s;
+   display: none;
+}
+.header__notify::before{
+    content: "";
+    border-width: 30px 26px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 6px;
+    top:-39px;
+}
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.notify__header{
+   height: 40px;
+   background-color: var(--white-color);
+}
+.notify__header h3{
+    color: #999;
+    margin:0 0 0 12px;
+    font-size: 1.4rem;
+    line-height: 40px;
+    font-weight: 400;
+    user-select: none;
+}
+.notify__list{
+    padding-left: 0;
+}
+.notify__list-item{
+display: flex;
+}
+.notify__list-item:hover{
+    background-color: #f7f7f7;
+}
+.notify__list-item--viewed{
+    background-color: rgba(238,77,45,0.09);
+}
+.notify__link{
+    display: flex;
+    padding: 12px;
+    width: 100%;
+    text-decoration: none;
+   
+}
+.notify__img{
+    width: 48px;
+    object-fit: contain;
+}
+.notify__info{
+  margin-left: 12px;
+}
+.notify__info-name{
+  display: block;
+  font-size: 1.4rem;
+  color: var(--black-color);
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+.notify__info-desc{
+    display: block;
+   font-size: 1.2rem;
+   color: #c2b5b3;
+   line-height: 1.8rem;
+}
+.notify__footer{
+    display: flex;
+}
+.notify__footer-btn{
+    text-decoration: none;
+    padding: 8px 48px;
+    color: #333;
+    font-weight: 400;
+    margin: auto;
+    font-size: 1.4rem;
+}
+/* authen modal */
+.auth-form{
+    width: 500px;
+}
+.auth-form__container{
+    padding: 0 32px;
+}
+.auth-form__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.auth-form__heading{
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.auth-form__switch-btn{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #ee4d2d;
+    cursor:pointer;
+}
+.auth-form__form{
+    margin-top: 16px;
+}
