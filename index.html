@@ -200,11 +200,48 @@
               </svg>
             </div>
             <div class="header__search">
-              <input
-                type="text"
-                class="header__search-input"
-                placeholder="Nhập để tìm kiếm "
-              />
+              <div class="header__search-input-wrap">
+                <input
+                  type="text"
+                  class="header__search-input"
+                  placeholder="Nhập để tìm kiếm "
+                />
+                <!-- Search history -->
+                <div class="header__search-history">
+                  <h3 class="header__search-history-heading">
+                    Lịch sử tìm kiếm
+                  </h3>
+                  <ul class="header__search-history-list">
+                    <li class="header__search-history-item">
+                      <a href="#">điện thoại giá rẻ</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <a href="#">ốp điện thoại</a>
+                    </li>
+                    <li class="header__search-history-item">
+                      <a href="#">áo đấu arsenal</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="header__search-select">
+                <span class="header__search-select-label">Trong Shop</span>
+
+                <i class="header__search-select-icon fa-solid fa-sort-down"></i>
+                <ul class="header__search-option">
+                  <li class="header__search-option-item">
+                    <span>Trong shop</span>
+                  </li>
+                  <li class="header__search-option-item">
+                    <span>Ngoài shop</span>
+                  </li>
+                </ul>
+              </div>
+              <button class="header__search-btn">
+                <i
+                  class="header__search-btn-icon fa-solid fa-magnifying-glass"
+                ></i>
+              </button>
             </div>
             <div class="header__cart">
               <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
